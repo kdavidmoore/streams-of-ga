@@ -40,23 +40,6 @@
         </table>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('#mainTable').DataTable({
-                ajax: {
-                    "url": "http://localhost:3015/",
-                    "dataSrc": "value.timeSeries"
-                },
-                columns: [
-                    { data: "sourceInfo.siteName" },
-                    { data: "sourceInfo.geoLocation.geogLocation.latitude" },
-                    { data: "sourceInfo.geoLocation.geogLocation.longitude" },
-                    { data: "variable.variableName" },
-                    { data: "values[0].value[0].value" },
-                    { data: "values[0].value[0].dateTime" }
-                ]
-            });
-        });
-    </script>
+    <script src="assets/getData.js"></script>
 </body>
 </html>
