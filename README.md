@@ -6,10 +6,10 @@ The proxy server was created using Express and is located in the `/server` direc
 
 This is really the same idea as [one of my previous projects](https://github.com/kdavidmoore/usgs-rest). Old wine in new bottles.
 
-## Built with
-Express
-jQuery
-[DataTables](https://datatables.net/)
-Bootstrap
+Note: the proxy server has to be running on `localhost:3015` for this app to work.
 
-### Note: the proxy server has to be running on `localhost:3015` for this app to work.
+## Built with
+* Express
+* jQuery
+* [DataTables](https://datatables.net/)
+* Bootstrap 4 Alpha 4
