@@ -3,7 +3,10 @@ var router = express.Router();
 var http = require('http');
 
 router.get('/', function(req, res, next) {
-    res.json({ warning: 'No route paramters set.' });
+    res.render('index', {
+        title: 'Warning',
+        message: 'No route paramters set.'
+    });
 });
 
 router.get('/:whatever', function(req, res, next) {
