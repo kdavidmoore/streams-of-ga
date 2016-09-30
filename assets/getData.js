@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#mainTable').DataTable({
     ajax: {
-      "url": "http://kdavidmoore.com:3015/",
+      "url": "http://kdavidmoore.com:3015/default",
       "dataSrc": "value.timeSeries"
     },
     columns: [

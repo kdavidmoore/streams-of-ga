@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 var http = require('http');
 
-// router.get('/', function(req, res, next) {
-//     res.json({ warning: 'No HUC code provided.' });
-// });
-
 router.get('/', function(req, res, next) {
+    res.json({ warning: 'No route paramters set.' });
+});
+
+router.get('/default', function(req, res, next) {
     // var huc_raw = encodeURI(req.params.huc);
     // var huc = huc_raw.substring(0, s.indexOf('?'));
     // console.log(huc);
