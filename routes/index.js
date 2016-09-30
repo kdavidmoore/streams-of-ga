@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
     res.json({ warning: 'No route paramters set.' });
 });
 
-router.get('/default', function(req, res, next) {
+router.get('/:whatever', function(req, res, next) {
     // var huc_raw = encodeURI(req.params.huc);
     // var huc = huc_raw.substring(0, s.indexOf('?'));
     // console.log(huc);
