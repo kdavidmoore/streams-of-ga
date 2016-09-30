@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Upper Chattahoochee Watershed</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="https://cfpub.epa.gov/surf/huc.cfm?huc_code=03130001"><h1>Upper Chattahoochee Watershed</h1></a>
+    </header>
+    <div class="table-wrapper">
+        <table id="mainTable" class="display" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Site Name</th>
+                    <th>Lat</th>
+                    <th>Lng</th>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                    <th>Time Measured</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Site Name</th>
+                    <th>Lat</th>
+                    <th>Lng</th>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                    <th>Time Measured</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#mainTable').DataTable({
+                ajax: {
+                    "url": "http://localhost:3015/",
+                    "dataSrc": "value.timeSeries"
+                },
+                columns: [
+                    { data: "sourceInfo.siteName" },
+                    { data: "sourceInfo.geoLocation.geogLocation.latitude" },
+                    { data: "sourceInfo.geoLocation.geogLocation.longitude" },
+                    { data: "variable.variableName" },
+                    { data: "values[0].value[0].value" },
+                    { data: "values[0].value[0].dateTime" }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

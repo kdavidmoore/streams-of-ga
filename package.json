@@ -1,0 +1,14 @@
+{
+  "name": "streams-of-ga",
+  "version": "1.0.0",
+  "description": "Displaying streams info from USGS REST API using DataTables.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keith D. Moore",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.4"
+  }
+}
