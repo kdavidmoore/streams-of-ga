@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#mainTable').DataTable({
     ajax: {
-      "url": "https://streams-of-ga.herokuapp.com:3015/",
+      "url": "http://kdavidmoore.com:3015/",
       "dataSrc": "value.timeSeries"
     },
     columns: [
