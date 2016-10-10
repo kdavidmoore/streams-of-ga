@@ -20,9 +20,8 @@ $(document).ready(function() {
         targets: [1, 2] 
       },
       {
-       render: function(data, type, row) {
-          var sampled = new Date(data);
-          return sampled;
+        render: function(data, type, row) {
+          return new Date(data);
         },
         targets: [5] 
       }]
